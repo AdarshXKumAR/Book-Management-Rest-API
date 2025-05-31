@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="/public/static/styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Book Management System</h1>
+            <p>Manage your book collection with style</p>
+        </div>
+
+        <div class="form-container">
+            <h2 style="margin-bottom: 20px; color: #667eea;">Add New Book</h2>
+            <div id="message"></div>
+            <form id="bookForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="title">Book Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year (Optional)</label>
+                        <input type="number" id="year" name="year" min="1000" max="2025">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        Add Book
+                    </button>
+                    <button type="button" class="btn btn-cancel" id="cancelBtn" style="display: none;">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="books-container">
+            <div class="books-header">
+                <h2 style="color: #667eea;">Your Book Collection</h2>
+                <button class="btn btn-primary" onclick="loadBooks()">🔄 Refresh</button>
+            </div>
+            
+            <div class="stats" id="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalBooks">0</div>
+                    <div class="stat-label">Total Books</div>
+                </div>
+            </div>
+
+            <div class="books-grid" id="booksGrid">
+                <div class="loading"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/static/script.js"></script>
+
+</body>
+</html>
