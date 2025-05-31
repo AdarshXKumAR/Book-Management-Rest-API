@@ -2,7 +2,6 @@
 
 A modern, full-stack book management system built with Node.js, Express.js, and vanilla JavaScript featuring a beautiful dark-themed UI with glassmorphism design.
 
-![GitHub](https://img.shields.io/github/license/AdarshXKumAR/Book-Management-Rest-API)
 ![Node.js](https://img.shields.io/badge/Node.js-v14+-green)
 ![Express.js](https://img.shields.io/badge/Express.js-v4.18+-blue)
 
